@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_color_2">
+
+
+        <ImageView
+            android:id="@+id/iv_btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBack"
+            android:src="@drawable/btn_back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="困った時に見るページ"
+            android:textColor="@color/char_brown_3"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lay_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/lay_header"
+        android:layout_above="@+id/lay_footer">
+
+        <WebView
+            android:id="@+id/webView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <!--
+                    <RelativeLayout
+                        android:id="@+id/rgi_lay_honbun"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.8" >
+
+                                <ScrollView
+                                    android:id="@+id/op_scrl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#ffffff"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_weight="9.5" >
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical" >
+
+                                        <TextView
+                                            android:id="@+id/page_body"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:paddingBottom="10dp"
+                                            android:paddingTop="15dp"
+                                            android:text=""
+                                            android:textColor="#4a4240" />
+
+                                    </LinearLayout>
+                                </ScrollView>
+
+                    </RelativeLayout>
+        -->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff">
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickTel"
+            android:src="@drawable/btn_tel" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/base_color_1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="堀病院"
+                android:textColor="@color/char_brown_3"
+                android:textSize="20dp" />
+
+            <jp.or.horih.view.imagebutton.PressableImageButton
+                android:id="@+id/iv_btn_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_btn_setting"
+                android:onClick="onClickNotice"
+                android:src="@drawable/bell" />
+
+            <TextView
+                android:id="@+id/txt_notice_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/iv_btn_setting"
+                android:background="@drawable/notice_back_corners"
+                android:text="10"
+                android:textColor="#ffffff"
+                android:visibility="gone" />
+
+            <jp.or.horih.view.imagebutton.PressableImageButton
+                android:id="@+id/iv_btn_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onClickSetting"
+                android:src="@drawable/btn_setting" />
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 説明１ -->
+                <RelativeLayout
+                    android:id="@+id/lay_description1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/base_color_1"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="ご利用になるメニューを選択してください。"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <!-- 説明２ -->
+
+                <RelativeLayout
+                    android:id="@+id/lay_description2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/base_color_1">
+
+                    <RelativeLayout
+                        android:id="@+id/lay_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/base_color_1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="赤ちゃん誕生まで、"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="（40週0日まで）"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_mes1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="残り"
+                                    android:layout_gravity="center_horizontal|bottom"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/count_message"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_horizontal|bottom"
+                                    android:text="10"
+                                    android:textColor="@color/char_yellow_1"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:id="@+id/txt_mes2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_horizontal|bottom"
+                                    android:text="週"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/count_message2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="10"
+                                    android:textColor="@color/char_yellow_1"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:id="@+id/txt_mes3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_horizontal|bottom"
+                                    android:text="日"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="20sp" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lay_1"
+                        android:background="@drawable/top_center_bg">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_week_count37"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="37週0日まであと0日"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txt_week_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="19週と４日目／妊娠４ヶ月目"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txt_expected_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="出産予定日：2014年３月１日"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- 予約 -->
+
+                <RelativeLayout
+                    android:id="@+id/lay_reserve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickReserve">
+
+                    <ImageView
+                        android:id="@+id/iv_reserve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_02" />
+                </RelativeLayout>
+
+                <!-- 妊娠カレンダー -->
+
+                <RelativeLayout
+                    android:id="@+id/lay_pregnancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickPregnancy"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_pregnancy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_03" />
+                </RelativeLayout>
+
+                <!-- 陣痛タイマー -->
+
+                <RelativeLayout
+                    android:id="@+id/lay_labor_pains"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickLaborPains"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_labor_pains"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_04" />
+                </RelativeLayout>
+
+                <!-- 困ったらー -->
+
+                <RelativeLayout
+                    android:id="@+id/lay_trouble"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickTrouble"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_labor_trouble"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_05" />
+                </RelativeLayout>
+
+                <!-- お問い合わせ -->
+
+                <RelativeLayout
+                    android:id="@+id/lay_inquiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickInquiry">
+
+                    <ImageView
+                        android:id="@+id/iv_inquiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_06" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

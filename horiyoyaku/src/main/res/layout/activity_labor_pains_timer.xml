@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_color_2">
+
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:id="@+id/iv_btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBack"
+            android:src="@drawable/btn_back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="陣痛タイマー"
+            android:textColor="@color/char_brown_3"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lay_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_header"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff">
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:onClick="onClickReset"
+            android:src="@drawable/btn_reset" />
+
+        <TextView
+            android:id="@+id/txt_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_reset"
+            android:layout_centerHorizontal="true"
+            android:text="00:00"
+            android:textSize="50dp" />
+
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:id="@+id/btn_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_timer"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickTimer"
+            android:src="@drawable/btn_start" />
+
+    </RelativeLayout>
+
+
+    <!-- 履歴 -->
+    <LinearLayout
+        android:id="@+id/lay_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/lay_timer"
+        android:layout_above="@+id/lay_footer">
+
+        <!-- 履歴ヘッダー -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/base_gray_1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="スタート"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="持続時間"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="間隔"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- 履歴データ -->
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.8">
+
+
+            <ListView
+                android:id="@+id/recordListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:dividerPadding="0dp"
+                android:fadingEdge="none"
+                android:focusable="true">
+
+            </ListView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff">
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickTel"
+            android:src="@drawable/btn_tel" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

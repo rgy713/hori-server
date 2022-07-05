@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/item_lay_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/txt_new"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/notice_back_corners"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="N"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <jp.or.horih.view.textview.EllipsizingTextView
+                    android:id="@+id/txt_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:maxLines="1"
+                    android:textColor="#000000"
+                    android:text="あああああああああああああああ"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <jp.or.horih.view.textview.EllipsizingTextView
+                android:id="@+id/txt_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:maxLines="1"
+                android:text="うううう"
+                android:textSize="10dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="2014/06/06"
+                android:textSize="8dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textSize="10dp"
+                android:textColor="#000000" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.0dp"
+                android:background="#d8d8df"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/setting_next_button">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+    

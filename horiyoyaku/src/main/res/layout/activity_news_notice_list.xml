@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!-- header -->
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_color_2">
+
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:id="@+id/iv_btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBack"
+            android:src="@drawable/btn_back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="堀病院からお知らせ"
+            android:textColor="@color/char_brown_3"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lay_header"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/recordListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:fadingEdge="none"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:dividerPadding="0dp"
+            android:background="@null">
+
+        </ListView>
+
+    </LinearLayout>
+
+</RelativeLayout>

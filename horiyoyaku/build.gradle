@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "jp.or.horih"
+        minSdkVersion 19
+        targetSdkVersion 26
+    }
+
+    buildTypes {
+        debug {
+            multiDexEnabled true
+            multiDexKeepFile file('multidex_keep_file.txt')
+            multiDexKeepProguard file('multidex-config.pro')
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile project(':lib')
+    compile project(':pullToRefreshLibrary')
+    compile 'com.google.android.gms:play-services:+'
+    compile files('libs/android-directionalviewpager-1.2.1fixed.jar')
+    compile files('libs/httpmime-4.3.3.jar')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'org.apache.httpcomponents:httpcore:4.4.1'
+    compile 'com.android.support:multidex:1.0.1'
+}

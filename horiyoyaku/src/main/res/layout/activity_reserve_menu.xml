@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_color_2">
+
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickBack"
+            android:src="@drawable/btn_back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="予約メニュー"
+            android:textColor="@color/char_brown_3"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_reserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_header"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp">
+
+
+        <jp.or.horih.view.button.PressableButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="予約する"
+            android:textColor="#ffffff"
+            android:onClick="onClickReserve"
+            android:background="@drawable/button_corners" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_reserve"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp">
+
+
+        <jp.or.horih.view.button.PressableButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="予約確認・キャンセル"
+            android:textColor="#ffffff"
+            android:onClick="onClickCancel"
+            android:background="@drawable/button_corners" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lay_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_cancel"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp">
+
+
+        <jp.or.horih.view.button.PressableButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="呼び出し状況"
+            android:textColor="#ffffff"
+            android:onClick="onClickCall"
+            android:background="@drawable/button_corners" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

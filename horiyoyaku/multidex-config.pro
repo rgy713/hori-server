@@ -1,0 +1,1 @@
+-keep class jp.or.horih.** { *; }

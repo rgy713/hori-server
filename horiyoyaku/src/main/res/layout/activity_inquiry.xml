@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusableInTouchMode="true">
+
+    <!-- header -->
+    <RelativeLayout
+        android:id="@+id/v_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_color_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="お問合せ"
+            android:textColor="@color/char_brown_2"
+            android:textSize="20dp" />
+
+        <jp.or.horih.view.imagebutton.PressableImageButton
+            android:id="@+id/iv_btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/btn_back"
+            android:onClick="onClickBack" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_header"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:background="@null"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="名前" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inq_txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/button_text_corners"
+                android:paddingLeft="10dp"></EditText>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="電話番号" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inq_txt_tel"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/button_text_corners"
+                android:paddingLeft="10dp"></EditText>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="住所" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inq_txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_text_corners"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp">
+
+            </EditText>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="診察券番号" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inq_txt_num"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/button_text_corners"
+                android:paddingLeft="10dp"></EditText>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="メールアドレス" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inq_txt_mail"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/button_text_corners"
+                android:paddingLeft="10dp"></EditText>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="問い合わせ内容" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inq_txt_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_text_corners"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp">
+
+            </EditText>
+
+
+            <!-- ボタン-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <jp.or.horih.view.imagebutton.PressableImageButton
+                    android:id="@+id/rgi_btn_prv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:onClick="onClickSend"
+                    android:src="@drawable/btn_send" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

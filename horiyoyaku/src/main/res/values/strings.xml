@@ -1,0 +1,136 @@
+<resources>
+    <string name="head_font">mplus-1mn-medium.ttf</string>
+    <string name="count_font">Montserrat-Bold.ttf</string>
+
+    <!--
+      プッシュ通知用Api keyの取得方法
+      1. https://code.google.com/apis/console にアクセス
+        ⇒ 開発者アカウントでログイン
+      2. 左側のメニューから APIs & auth -> Credentialsをクリック
+      3. Public API access の CREATE NEW KEY をクリック
+      4. ダイアログから Server keyをクリック
+      5. 許可するIPアドレスを入力（全方位から受け付ける場合は入力なし）してから create をクリック
+      6. 画面上に表示されているAPI keyをコピーして上に張り付ける
+         AIzaSyDbOeeAjGhB__8ESVSwr1Gpk45oEZ86qww
+         
+      下の gcm_sender_id に入るキーは、プッシュ通知用APIキーを取得した後
+      ブラウザのアドレスで
+      https://console.developers.google.com/project/767162019233/apiui/credential?authuser=0
+                                                    ^^^^^^^^^^^^^
+      の部分を記述（プロジェクトコード）
+    -->
+    <string name="gcm_google_play_service_is_not_available">Google Play開発者サービスをインストールしてください</string>
+
+    <!-- テスト用 -->
+    <!--
+    <string name="app_name">テスト堀病院アプリ</string>
+    <string name="trouble_tel">0453912561</string>
+    <string name="trouble_mail">support@hori-h.or.jp</string>
+    <string name="gcm_sender_id">101997991130</string>
+    <string name="server_scheme">http://</string>
+    <string name="scheme">http</string>
+    <string name="server_host">133.242.22.155</string>
+    -->
+
+
+    <!-- 本番用 -->
+    <string name="app_name">堀病院アプリ</string>
+    <string name="trouble_tel">0453912561</string>
+    <string name="trouble_mail">support@hori-h.or.jp</string>
+    <string name="gcm_sender_id">767162019233</string>
+    <string name="server_scheme">https://</string>
+    <string name="scheme">https</string>
+    <string name="server_host">rsv.hori-h.or.jp</string>
+
+    <string name="path_account_chk">/reservation_app/Account/patient_chk</string>
+    <string name="path_upd_token">/reservation_app/Account/edit</string>
+    <string name="path_reserve">/reservation_app/ReserveGroup</string>
+    <string name="path_reserve_cancel">/reservation_app/ReserveConfirm</string>
+    <string name="path_reserve_call">/reservation_app/CallingStatus</string>
+    <string name="path_notice_news">/reservation_app/Account/notice</string>
+    <string name="path_notice_news_mi">/reservation_app/Account/mi_notice</string>
+    <string name="path_notice_detail">/reservation_app/Account/notice_detail</string>
+    <string name="path_version">/reservation_app/GetAndroidVersion</string>
+
+    <!-- カレンダーhtmlの場所-->
+    <string name="path_calendar1">/reservation_app/html/calendar1.htm</string>
+    <string name="path_calendar1_1">/reservation_app/html/calendar1_1.htm</string>
+    <string name="path_calendar2">/reservation_app/html/calendar2.htm</string>
+    <string name="path_trouble">/reservation_app/html/trouble.htm</string>
+
+    <string name="path_policy">/reservation_app/policy2.htm</string>
+
+    <!-- htmlからのアプリとじる文字列-->
+    <string name="web_close_string">native://js</string>
+
+    <string name="review_url">https://play.google.com/store/apps/details?id=jp.or.horih&amp;hl=ja</string>
+    <string name="version_string">Google Playに新しいバージョンがあります。</string>
+
+    <string name="network_error_string">現在オフラインです。</string>
+    <string name="regist_error_web_string">データ通信中にエラーが発生しました。電波のよいところで再度お試しください。</string>
+    <string name="regist_error_db_string">エラーが発生しました。DB。</string>
+
+    <!-- <style name="RadioButton">
+        <item name="android:textColor">@drawable/button_text_color</item>
+        <item name="android:minHeight">33dp</item>
+        <item name="android:minWidth">70dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style> -->
+
+
+    <string name="trouble_body">
+&lt;br&gt;
+妊婦さんにはほうっておいてはいけないトラブルがあります。&lt;br&gt;次のような症状のときは、すみやかに掘病院に電話して診察を受けましょう。
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+&lt;font color=#f39800&gt;
+★おなかの張り・痛み
+&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+
+張りや痛みがだんだん強くなったり、出血や発熱を伴う時などは絶対に放っていてはいけません。&lt;br&gt;流産や常位胎盤早期剥離、早産など深刻な事態も考えられますので、夜間であっても病院に電話しましょう。&lt;br&gt;おなかを打ったなどのときも、しばらく安静にして様子をみて、少しでもおかしいと思ったら病院に連絡しましょう。
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;font color=#f39800&gt;
+★出血
+&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+
+妊娠中の出血は出血量にかかわらず、注意が必要です。&lt;br&gt;妊娠初期ならば流産・中期以後ならば切迫流産や前置胎盤、常位胎盤早期剥離などが考えられます。&lt;br&gt;安静にしていても出血が増えてくる、おなかの張りを伴う場合は病院に連絡して下さい。
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;font color=#f39800&gt;
+★頭痛
+&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+強い頭痛が長くつづく、目に火花が散る、チラチラするというときは妊娠高血圧症候群の可能性があります。&lt;br&gt;病院に連絡して相談しましょう。
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+&lt;font color=#f39800&gt;
+★つわりがひどく水分もとれない
+&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+くり返し吐いて水分も受けつけないときは「妊娠悪阻」の心配 があります。&lt;br&gt;脱水や代謝異常をきたすおそれがありますので、受診をしましょう。
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;font color=#f39800&gt;
+★胎動が急に感じられなくなった
+&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+胎動が急に感じられなくなったという時には、何らかの原因で赤ちゃんが弱まっている事が考えられます。&lt;br&gt;病院に連絡をして受診しましょう。
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;font color=#f39800&gt;
+★前期破水
+&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+陣痛開始前に破水してしまったら、流産・早産の危険性もあります。&lt;br&gt;このような場合はまず、安静にして早急に病院へ電話して医師の指示を受けてください。
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+</resources>

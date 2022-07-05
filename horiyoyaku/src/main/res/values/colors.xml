@@ -1,0 +1,25 @@
+<resources>
+
+    <color name="base_color_1">#f29b76</color>
+    <color name="base_color_2">#e3949f</color>
+    <color name="base_color_3">#9e676f</color>
+
+    <color name="base_gray_1">#e3e3e3</color>
+
+    <color name="char_brown_1">#99624b</color>
+    <color name="char_brown_2">#9e676f</color>
+    <color name="char_brown_3">#9e5d4b</color>
+    <color name="char_black">#0d0d0d</color>
+    <color name="linkchar_blue">#4169e1</color>
+
+    <color name="char_yellow_1">#fff45c</color>
+
+
+    <!--
+        <color name="radio_button_selected_color">#ff33b5e5</color>
+        <color name="radio_button_unselected_color">@android:color/transparent</color>
+     -->
+    <color name="radio_button_selected_color">#99624b</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+
+</resources>

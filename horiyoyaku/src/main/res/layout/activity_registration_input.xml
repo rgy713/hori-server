@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusableInTouchMode="true">
+
+    <!-- header -->
+    <RelativeLayout
+        android:id="@+id/v_header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/base_color_1">
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="ご利用いただくにあたって\n下記の情報をご入力ください。"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_header"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/iv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="患者番号"
+                    android:textColor="@color/char_brown_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv_num"
+                    android:text="診察券に記入されている番号をご入力ください。"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/inq_txt_num"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_text_corners"
+                android:inputType="number"
+                android:paddingLeft="10dp"></EditText>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/iv_birth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="生年月日"
+                    android:textColor="@color/char_brown_1" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onClickBirth"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/inq_txt_birth_year"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/button_text_corners"
+                    android:inputType="number"
+                    android:onClick="onClickBirth"
+                    android:paddingLeft="10dp"></EditText>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="年"
+                    android:textColor="@color/char_brown_1" />
+
+                <EditText
+                    android:id="@+id/inq_txt_birth_month"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_text_corners"
+                    android:inputType="number"
+                    android:onClick="onClickBirth"
+                    android:paddingLeft="5dp">
+
+                </EditText>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="月"
+                    android:textColor="@color/char_brown_1" />
+
+                <EditText
+                    android:id="@+id/inq_txt_birth_day"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_text_corners"
+                    android:inputType="number"
+                    android:onClick="onClickBirth"
+                    android:paddingLeft="5dp">
+
+                </EditText>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="日"
+                    android:textColor="@color/char_brown_1" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="現在妊娠していますか？"
+                    android:textColor="@color/char_brown_1" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/group_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_horizontal">
+
+                <info.hoang8f.android.segmented.SegmentedGroup
+                    android:id="@+id/segmented2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_yes"
+                        style="@style/RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickYes"
+                        android:text="はい" />
+
+
+                    <RadioButton
+                        android:id="@+id/radio_no"
+                        style="@style/RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClickNo"
+                        android:text="いいえ" />
+
+                </info.hoang8f.android.segmented.SegmentedGroup>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lay_birth_expected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/lay_expected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/iv_birth_expected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="出産予定日"
+                        android:textColor="@color/char_brown_1" />
+
+                    <jp.or.horih.view.imagebutton.PressableImageButton
+                        android:id="@+id/rgi_btn_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@+id/iv_birth_expected"
+                        android:onClick="onClickClear"
+                        android:src="@drawable/btn_clear" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lay_expected"
+                    android:layout_marginTop="5dp"
+                    android:onClick="onClickBirthExpected"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/inq_txt_birth_expected_year"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/button_text_corners"
+                        android:inputType="number"
+                        android:onClick="onClickBirthExpected"
+                        android:paddingLeft="10dp"></EditText>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="年"
+                        android:textColor="@color/char_brown_1" />
+
+                    <EditText
+                        android:id="@+id/inq_txt_birth_expected_month"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_text_corners"
+                        android:inputType="number"
+                        android:onClick="onClickBirthExpected"
+                        android:paddingLeft="5dp">
+
+                    </EditText>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="月"
+                        android:textColor="@color/char_brown_1" />
+
+                    <EditText
+                        android:id="@+id/inq_txt_birth_expected_day"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_text_corners"
+                        android:inputType="number"
+                        android:onClick="onClickBirthExpected"
+                        android:paddingLeft="5dp">
+
+                    </EditText>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="日"
+                        android:textColor="@color/char_brown_1" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <!-- ボタン-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:id="@+id/rgi_inp_lay_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <jp.or.horih.view.button.PressableButton
+                        android:id="@+id/rgi_btn_ok"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_corners"
+                        android:onClick="onClickOk"
+                        android:text="決定"
+                        android:textColor="#ffffff" />
+
+                    <jp.or.horih.view.button.PressableButton
+                        android:id="@+id/rgi_btn_ng"
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_corners2"
+                        android:onClick="onClickNg"
+                        android:text="キャンセル"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onClickPrivacy">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="プライバシーポリシー"
+                    android:textColor="#00a0c6"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
